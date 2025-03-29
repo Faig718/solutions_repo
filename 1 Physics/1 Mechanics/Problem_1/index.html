@@ -180,6 +180,33 @@
 <div class="arithmatex">\[
 R = \frac{v_0^2 \sin(2\theta)}{g}
 \]</div>
+<p>where:<br/>
+- <span class="arithmatex">\( v_0 \)</span> = initial velocity,<br/>
+- <span class="arithmatex">\( \theta \)</span> = angle of projection,<br/>
+- <span class="arithmatex">\( g \)</span> = acceleration due to gravity (9.81 m/s² on Earth),<br/>
+- <span class="arithmatex">\( \sin(2\theta) \)</span> = the sine of twice the launch angle.</p>
+<h4 id="key-observations"><strong>Key Observations</strong></h4>
+<ol>
+<li><strong>Maximum Range</strong>: The maximum range is achieved when <span class="arithmatex">\( \theta = 45^\circ \)</span>, because <span class="arithmatex">\( \sin(90^\circ) = 1 \)</span>, which is the highest possible value for the sine function.  </li>
+<li><strong>Symmetry</strong>: The range for angles <span class="arithmatex">\( \theta \)</span> and <span class="arithmatex">\( 90^\circ - \theta \)</span> is the same (e.g., 30° and 60° give the same range).  </li>
+<li><strong>Dependence on Initial Velocity</strong>: Higher launch speeds increase the range quadratically (<span class="arithmatex">\( v_0^2 \)</span> relationship).  </li>
+</ol>
+<hr/>
+<h3 id="theoretical-foundation_1"><strong>Theoretical Foundation</strong></h3>
+<p>Projectile motion follows Newton’s laws of motion, assuming no air resistance. The motion can be decomposed into two independent components:  </p>
+<ol>
+<li><strong>Horizontal Motion</strong> </li>
+<li>Constant velocity: <span class="arithmatex">\( v_x = v_0 \cos\theta \)</span> </li>
+<li>
+<p>Distance traveled: <span class="arithmatex">\( x = v_0 \cos\theta \cdot t \)</span> </p>
+</li>
+<li>
+<p><strong>Vertical Motion</strong> </p>
+</li>
+<li>Accelerated motion under gravity: <span class="arithmatex">\( v_y = v_0 \sin\theta - gt \)</span> </li>
+<li>Time to reach max height: <span class="arithmatex">\( t_{\text{up}} = \frac{v_0 \sin\theta}{g} \)</span> </li>
+<li>Total flight time: <span class="arithmatex">\( T = \frac{2v_0 \sin\theta}{g} \)</span> </li>
+</ol>
 <p>Since the range is determined by both horizontal velocity and time of flight, the product of these values gives the range formula.  </p>
 <h3 id="applications"><strong>Applications</strong></h3>
 <ul>
@@ -219,6 +246,46 @@ plt.show()
 
 </code></pre>
 <p><img alt="alt text" src="../image.png"/></p>
+<p>To understand how the horizontal range of a projectile depends on the angle of projection, we need to break down the problem into key physics concepts, focusing on projectile motion.</p>
+<h3 id="1-horizontal-range-and-angle-of-projection">1. <strong>Horizontal Range and Angle of Projection:</strong></h3>
+<p>The <strong>horizontal range</strong> <span class="arithmatex">\(R\)</span> is the distance traveled by a projectile along the horizontal axis before it returns to the same vertical level from which it was launched. The range is influenced primarily by the initial velocity, the angle of projection, and gravitational acceleration.</p>
+<p>The formula for the horizontal range <span class="arithmatex">\(R\)</span> of a projectile launched from the ground is given by:</p>
+<div class="arithmatex">\[
+R = \frac{v_0^2 \sin(2\theta)}{g}
+\]</div>
+<p>Where:
+- <span class="arithmatex">\(v_0\)</span> is the initial velocity of the projectile.
+- <span class="arithmatex">\(\theta\)</span> is the angle of projection.
+- <span class="arithmatex">\(g\)</span> is the acceleration due to gravity.</p>
+<h4 id="key-observations_1"><strong>Key Observations:</strong></h4>
+<ul>
+<li>The horizontal range is proportional to the square of the initial velocity, <span class="arithmatex">\(v_0^2\)</span>, and the sine of twice the projection angle, <span class="arithmatex">\(\sin(2\theta)\)</span>.</li>
+<li>The range is <strong>maximized</strong> when the angle of projection <span class="arithmatex">\(\theta = 45^\circ\)</span>, because <span class="arithmatex">\(\sin(90^\circ) = 1\)</span> gives the maximum value for the sine function.</li>
+<li>At <span class="arithmatex">\(\theta = 0^\circ\)</span> or <span class="arithmatex">\(\theta = 90^\circ\)</span>, the range is zero. This is because, at <span class="arithmatex">\(\theta = 0^\circ\)</span>, the projectile moves horizontally without any vertical motion (no time in the air), and at <span class="arithmatex">\(\theta = 90^\circ\)</span>, the projectile moves straight up and then comes back down without traveling horizontally.</li>
+</ul>
+<h3 id="2-effect-of-changes-in-initial-velocity">2. <strong>Effect of Changes in Initial Velocity:</strong></h3>
+<p>From the range equation, we can see that the horizontal range depends on the <strong>square of the initial velocity</strong>. This means:
+- <strong>Increasing the initial velocity <span class="arithmatex">\(v_0\)</span></strong> will increase the horizontal range. If you double the velocity, the range will increase by a factor of four.
+- Conversely, decreasing the velocity will reduce the range.</p>
+<p>This relationship suggests that the faster a projectile is launched, the farther it will travel horizontally, assuming the angle of projection remains optimal (around 45°).</p>
+<h3 id="3-effect-of-gravitational-acceleration">3. <strong>Effect of Gravitational Acceleration:</strong></h3>
+<p>The horizontal range is inversely proportional to the gravitational acceleration <span class="arithmatex">\(g\)</span>, meaning:
+- <strong>Increasing gravitational acceleration (like on a planet with stronger gravity)</strong> will reduce the range. The projectile will spend less time in the air, so the horizontal distance it travels will be shorter.
+- <strong>Decreasing gravitational acceleration (like on the Moon, where gravity is weaker than on Earth)</strong> will increase the range. The projectile stays in the air for a longer period, traveling a greater horizontal distance.</p>
+<p>This explains why the range of a projectile is different on different planets, where the value of <span class="arithmatex">\(g\)</span> varies (on Earth, <span class="arithmatex">\(g \approx 9.8 \, m/s^2\)</span>, on the Moon, <span class="arithmatex">\(g \approx 1.6 \, m/s^2\)</span>).</p>
+<h3 id="4-summary-of-factors-affecting-range">4. <strong>Summary of Factors Affecting Range:</strong></h3>
+<ul>
+<li><strong>Angle of Projection</strong>: The range is maximized at 45° and decreases as the angle moves away from 45° in either direction (towards 0° or 90°).</li>
+<li><strong>Initial Velocity</strong>: The range increases with the square of the initial velocity.</li>
+<li><strong>Gravitational Acceleration</strong>: The range decreases as gravitational acceleration increases.</li>
+</ul>
+<h3 id="5-practical-examples">5. <strong>Practical Examples:</strong></h3>
+<ul>
+<li><strong>On Earth</strong>: If you increase the initial velocity from 10 m/s to 20 m/s while keeping the angle at 45°, the range will increase by a factor of 4.</li>
+<li><strong>On the Moon</strong>: If you use the same initial velocity and angle, the range on the Moon will be significantly greater than on Earth due to the lower gravitational acceleration.</li>
+</ul>
+<p>In conclusion, the horizontal range of a projectile is highly sensitive to both the angle of projection and the initial velocity. Gravitational acceleration also plays a significant role in determining how far a projectile will travel, with lower gravity leading to a longer range.</p>
+<p><img alt="alt text" src="../image-1.png"/></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
